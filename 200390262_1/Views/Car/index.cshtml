@@ -1,0 +1,47 @@
+﻿@model List<_200390262_1.Models.Car>
+@{
+    ViewData["Title"] = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>All Cars List</h2>
+    <table width="50%">
+        <tr>
+            <th>
+                ID
+            </th><th>
+                Brand
+            </th><th>
+                Model
+            </th><th>
+                ID
+
+                Type
+            </th><th>
+                Year
+            </th>
+        </tr>
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>
+                        @car.id
+                    </td>
+                    <td>
+                        @car.Brand
+                    </td>
+                    <td>
+                        @car.Model
+                    </td>
+                    <td>
+                        @car.Type
+                    </td>
+                    <td>
+                        @car.Year
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+            
+
