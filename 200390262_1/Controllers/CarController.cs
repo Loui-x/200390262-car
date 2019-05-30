@@ -20,10 +20,11 @@ namespace _200390262_1.Controllers
             new Car {id=2, Brand ="Toyota",Model ="Land cruiser", Type="compact", Year=2009},
             new Car {id=3, Brand ="Toyota",Model ="Prado", Type="compact", Year=1919}
         };
-       public ActionResult Detail(int? id)
+       public ActionResult Detail(int id)
         {
-            
-            if (id==null || id > carlist.Count)
+            //String n = String.Format("{0}", Request.Form["input_id"]);
+            //int ID_input = Convert.ToInt32(n);
+                if (id==null || id > carlist.Count)
             {
                 return Content("Invalid car id");
             }
